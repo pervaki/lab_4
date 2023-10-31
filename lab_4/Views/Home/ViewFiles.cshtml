@@ -1,0 +1,10 @@
+﻿@using System.IO
+@model List<string>
+
+<h2>Files</h2>
+<ul>
+    @foreach (var fileName in Model)
+    {
+        <li><a asp-action="ViewFile" asp-route-filename="@fileName">@fileName</a></li>
+    }
+</ul>
